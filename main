@@ -1,0 +1,1633 @@
+import java.util.*;
+public class weapon_market
+{
+    static double bill;
+    static Scanner sc=new Scanner(System.in);
+    static String dummy;
+    static weapon_market obj=new weapon_market();
+    public static void main()
+    {
+        System.out.println("\u000c");
+        String key;
+        
+        
+        do
+        {
+            System.out.println("\u000c");
+            System.out.println("\t\t   Welcome to Suhas' weapon market");
+            System.out.println("\t\tHave a look at our section of countries");
+            System.out.println("\n\n");
+            System.out.println("1. U.S.A");
+            System.out.println("2. Russia");
+            System.out.println("3. France");
+            System.out.println("4. Germany");
+            System.out.println("5. China");
+            System.out.println("6. Exit");
+            if(bill!=0.0)
+            {
+            System.out.println("7. Checkout and pay bill");
+            }
+            System.out.println("\n\n");
+                        if(bill!=0.0)
+            {
+            System.out.println("Enter 1/2/3/4/5 to buy weapons of that country or 6 to exit or 7 to checkout and pay bill.");
+             }
+             else
+             {
+             System.out.println("Enter 1/2/3/4/5 to buy weapons of that country or 6 to exit");
+              }
+            
+            int ch=sc.nextInt();
+            if(ch==1)
+            obj.usa();
+            else if(ch==2)
+            obj.russia();
+            else if(ch==3)
+            obj.france();
+            else if(ch==4)
+            obj.germany();
+            else if(ch==5)
+            obj.china();
+            else if(ch==6)
+            break;
+            else if(ch==7)
+            obj.checkout();
+            else
+            {
+                System.out.println("Invald choice");
+                dummy=sc.nextLine();
+            }
+            System.out.println("\n\n");
+            System.out.println("To continue shopping in Suhas' weapon market type 'y'/'Y' otherwise press any other key");
+            key=sc.nextLine();
+        }while(key.equalsIgnoreCase("y"));
+    
+        System.out.println("\n\n");
+        System.out.println("\t\tYour bill");
+        System.out.println("Pay Rs. "+bill);
+        System.out.println("\t\tThank you"); 
+        System.exit(0);
+    }
+    
+    
+    static void checkout()
+    {
+        System.out.println("\u000c");
+        System.out.println("\n\n");
+        System.out.println("\t\tYour bill");
+        System.out.println("Pay Rs. "+bill);
+        System.out.println("\t\tThank you"); 
+        System.exit(0);
+    }
+    
+    static void usa()
+    {
+        
+        
+        String choice="";
+        int ch;
+        System.out.println("\u000c");
+        do
+        {
+            System.out.println("\u000c");
+            System.out.println("Welcome to U.S.A's collection");
+            System.out.println("choose a category of weapons");
+            System.out.println("1. Assault rifles");
+            System.out.println("2. Pistols");
+            System.out.println("3. Shotguns");
+            System.out.println("4. Sniper rifles");
+            System.out.println("5. Machine guns/Sub-machine guns");
+            System.out.println("6. Launchers");
+            System.out.println("7. Choose different country");
+            if(bill!=0.0)
+            {
+            System.out.println("8. Checkout and pay bill");
+            }
+            System.out.println("\n\n");
+            if(bill!=0.0)
+            {
+            System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7/8");
+             }
+             else
+             {
+             System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7");
+              }
+              ch=sc.nextInt();
+              switch(ch)
+              {
+                    case 1:obj.usarifles();
+                    break;
+                    case 2:obj.usapistols();
+                    break;
+                    case 3:obj.usashotguns();
+                    break;
+                    case 4:obj.usasnipers();
+                    break;
+                    case 5:obj.usamachineguns();
+                    break;
+                    case 6:obj.usalaunchers();
+                    break;
+                    case 7:obj.main();
+                    break;
+                    case 8:obj.checkout();
+                           break;
+                    default :System.out.println("Wrong choice");
+                }
+                
+                if(ch!=8)
+                
+                {
+                    System.out.println("\n");
+                    dummy=sc.nextLine();
+                    System.out.println("Type 'yes' to continue buying weapons in this country otherwise press any other key");
+                    choice=sc.nextLine();
+                }
+                
+                }while(choice.equalsIgnoreCase("yes"));
+            
+   }
+   
+      static void russia()
+    {
+        String choice="";
+        int ch;
+        System.out.println("\u000c");
+        do
+        {
+            System.out.println("\u000c");
+            System.out.println("Welcome to Russia's collection");
+            System.out.println("choose a category of weapons");
+            System.out.println("1. Assault rifles");
+            System.out.println("2. Pistols");
+            System.out.println("3. Shotguns");
+            System.out.println("4. Sniper rifles");
+            System.out.println("5. Machine guns/Sub-machine guns");
+            System.out.println("6. Launchers");
+            System.out.println("7. Choose different country");
+            if(bill!=0.0)
+            {
+            System.out.println("8. Checkout and pay bill");
+            }
+            System.out.println("\n\n");
+            if(bill!=0.0)
+            {
+            System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7/8");
+             }
+             else
+             {
+             System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7");
+              }
+              ch=sc.nextInt();
+              switch(ch)
+              {
+                    case 1:obj.russiarifles();
+                    break;
+                    case 2:obj.russiapistols();
+                    break;
+                    case 3:obj.russiashotguns();
+                    break;
+                    case 4:obj.russiasnipers();
+                    break;
+                    case 5:obj.russiamachineguns();
+                    break;
+                    case 6:obj.russialaunchers();
+                    break;
+                    case 7:obj.main();
+                    break;
+                    case 8:obj.checkout();
+                           break;
+                    default :System.out.println("Wrong choice");
+                }
+                   
+                 if(ch!=8)
+                
+                {
+                    System.out.println("\n");
+                    dummy=sc.nextLine();
+                    System.out.println("Type 'yes' to continue buying weapons in this country otherwise press any other key");
+                    choice=sc.nextLine();
+                }
+                }while(choice.equalsIgnoreCase("yes"));
+   }
+   
+       static void france()
+    {
+        String choice="";
+        int ch;
+        System.out.println("\u000c");
+        do
+        {
+            System.out.println("\u000c");
+            System.out.println("Welcome to France's collection");
+            System.out.println("choose a category of weapons");
+            System.out.println("1. Assault rifles");
+            System.out.println("2. Pistols");
+            System.out.println("3. Shotguns");
+            System.out.println("4. Sniper rifles");
+            System.out.println("5. Machine guns/Sub-machine guns");
+            System.out.println("6. Launchers");
+            System.out.println("7. Choose different country");
+            if(bill!=0.0)
+            {
+            System.out.println("8. Checkout and pay bill");
+            }
+            System.out.println("\n\n");
+            if(bill!=0.0)
+            {
+            System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7/8");
+             }
+             else
+             {
+             System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7");
+              }
+              ch=sc.nextInt();
+              switch(ch)
+              {
+                    case 1:obj.francerifles();
+                    break;
+                    case 2:obj.francepistols();
+                    break;
+                    case 3:obj.franceshotguns();
+                    break;
+                    case 4:obj.francesnipers();
+                    break;
+                    case 5:obj.francemachineguns();
+                    break;
+                    case 6:obj.francelaunchers();
+                    break;
+                    case 7:obj.main();
+                    break;
+                    case 8:obj.checkout();
+                           break;
+                    default :System.out.println("Wrong choice");
+                }
+
+                 if(ch!=8)
+                
+                {
+                    System.out.println("\n");
+                    dummy=sc.nextLine();
+                    System.out.println("Type 'yes' to continue buying weapons in this country otherwise press any other key");
+                    choice=sc.nextLine();
+                }
+                }while(choice.equalsIgnoreCase("yes"));
+   }
+   
+       static void germany()
+    {
+        String choice="";
+        int ch;
+        System.out.println("\u000c");
+        do
+        {
+            System.out.println("\u000c");
+            System.out.println("Welcome to Germany's collection");
+            System.out.println("choose a category of weapons");
+            System.out.println("1. Assault rifles");
+            System.out.println("2. Pistols");
+            System.out.println("3. Shotguns");
+            System.out.println("4. Sniper rifles");
+            System.out.println("5. Machine guns/Sub-machine guns");
+            System.out.println("6. Launchers");
+            System.out.println("7. Choose different country");
+            if(bill!=0.0)
+            {
+            System.out.println("8. Checkout and pay bill");
+            }
+            System.out.println("\n\n");
+            if(bill!=0.0)
+            {
+            System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7/8");
+             }
+             else
+             {
+             System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7");
+              }
+              ch=sc.nextInt();
+              switch(ch)
+              {
+                    case 1:obj.germanyrifles();
+                    break;
+                    case 2:obj.germanypistols();
+                    break;
+                    case 3:obj.germanyshotguns();
+                    break;
+                    case 4:obj.germanysnipers();
+                    break;
+                    case 5:obj.germanymachineguns();
+                    break;
+                    case 6:obj.germanylaunchers();
+                    break;
+                    case 7:obj.main();
+                    break;
+                    case 8:obj.checkout();
+                           break;
+                    default :System.out.println("Wrong choice");
+                }
+
+                 if(ch!=8)
+                
+                {
+                    System.out.println("\n");
+                    dummy=sc.nextLine();
+                    System.out.println("Type 'yes' to continue buying weapons in this country otherwise press any other key");
+                    choice=sc.nextLine();
+                }
+                }while(choice.equalsIgnoreCase("yes"));
+   }
+   
+       static void china()
+    {
+        String choice="";
+        int ch;
+        System.out.println("\u000c");
+        do
+        {
+            System.out.println("\u000c");
+            System.out.println("Welcome to China's collection");
+            System.out.println("choose a category of weapons");
+            System.out.println("1. Assault rifles");
+            System.out.println("2. Pistols");
+            System.out.println("3. Shotguns");
+            System.out.println("4. Sniper rifles");
+            System.out.println("5. Machine guns/Sub-machine guns");
+            System.out.println("6. Launchers");
+            System.out.println("7. Choose different country");
+            if(bill!=0.0)
+            {
+            System.out.println("8. Checkout and pay bill");
+            }
+            System.out.println("\n\n");
+            if(bill!=0.0)
+            {
+            System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7/8");
+             }
+             else
+             {
+             System.out.println("Type the number that indicates your choice : 1/2/3/4/5/6/7");
+              }
+              ch=sc.nextInt();
+              switch(ch)
+              {
+                    case 1:obj.chinarifles();
+                    break;
+                    case 2:obj.chinapistols();
+                    break;
+                    case 3:obj.chinashotguns();
+                    break;
+                    case 4:obj.chinasnipers();
+                    break;
+                    case 5:obj.chinamachineguns();
+                    break;
+                    case 6:obj.chinalaunchers();
+                    break;
+                    case 7:obj.main();
+                    break;
+                    case 8:obj.checkout();
+                           break;
+                    default :System.out.println("Wrong choice");
+                }
+                    
+                 if(ch!=8)
+                
+                {
+                    System.out.println("\n");
+                    dummy=sc.nextLine();
+                    System.out.println("Type 'yes' to continue buying weapons in this country otherwise press any other key");
+                    choice=sc.nextLine();
+                }
+                }while(choice.equalsIgnoreCase("yes"));
+   }
+   
+   static void usarifles()
+   {
+       int x,c;
+       System.out.println("Welcome to U.S.A's assault rifle collection");
+       System.out.println("Each assault rifle cost's Rs. 20000");
+       System.out.println("1.M14 enhanced battle rifle\n2.M4 carbine\n3.M16A2 rifle\n4.M16 rifle");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose M14 enhanced battle rile");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 2 :System.out.println("You chose M4 carbine");
+                  System.out.println("Enter number of rifles you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*20000);
+                  break;         
+         case 3 :System.out.println("You chose M16A2 rifle");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+         case 4 :System.out.println("You chose M16 rifle");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    }
+   }        
+ static void russiarifles()
+   {
+       int x,c;
+       System.out.println("Welcome to Russia's assault rifle collection");
+       System.out.println("Each assault rifle cost's Rs. 20000");
+       System.out.println("1.AKM\n2.AKMS\n3.AK-74\n4.AKS-74\n5.AKS-74U\n6.AK-74\n7.AKS-74\n8.AS Val\n9.AK-74M\n10.AN-94\n11.AK-12\n12.AK-15\n13.AEK-971\n14.AEK-973\n15.Heckler & Koch HK416");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4/5/6/7/8/9/10/11/12/13/14/15");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose AKM");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 2 :System.out.println("You chose AKMS");
+                  System.out.println("Enter number of rifles you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*20000);
+                  break;         
+         case 3 :System.out.println("You chose AK-74");
+                   System.out.println("Enter number of rifles you would like to buy");
+                   c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+         case 4 :System.out.println("You chose AKS-74");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+         case 5 :System.out.println("You chose AKS-74U");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+         case 6 :System.out.println("You chose AK-74");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 7 :System.out.println("You chose AKS-74");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 8 :System.out.println("You chose AS VAL");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 9 :System.out.println("You chose AK-74M");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 10 :System.out.println("You chose AN-94");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 11 :System.out.println("You chose AK-12");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 12 :System.out.println("You chose AK-15");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 13 :System.out.println("You chose AEK-971");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 14 :System.out.println("You chose AEK-973");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 15 :System.out.println("You chose Heckler & Koch HK416");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    }
+   } 
+ static void francerifles()
+   {
+       int x,c;
+       System.out.println("Welcome to France's assault rifle collection");
+       System.out.println("Each assault rifle cost's Rs. 20000");
+       System.out.println("1.FAMAS F1\n2.HK416 A5(HK416 D14.5RS/HK416 F)\n3.FN SCAR-L\n4.M16 A2 M203(M16 723 M203)");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose FAMAS F1");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 2 :System.out.println("You chose HK416 A5(HK416 D14.5RS/HK416 F)");
+                  System.out.println("Enter number of rifles you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*20000);
+                  break;         
+         case 3 :System.out.println("You chose FN SCAR-L");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+         case 4 :System.out.println("You chose M16 A2 M203(M16 723 M203)");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    }
+   }       
+  static void germanyrifles()
+   {
+       int x,c;
+       System.out.println("Welcome to Germany's assault rifle collection");
+       System.out.println("Each assault rifle cost's Rs. 20000");
+       System.out.println("1.Heckler & Koch HK417\n2.Heckler & Koch G36/n3.Heckler & Koch G38(Heckler & Koch G95)\n4.Heckler & Koch G3\n5.Heckler & Koch G3");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4/5");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose Heckler & Koch HK417");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 2 :System.out.println("You chose Heckler & Koch G36");
+                  System.out.println("Enter number of rifles you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*20000);
+                  break;         
+         case 3 :System.out.println("You chose Heckler & Koch G38(Heckler & Koch G95)");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+         case 4 :System.out.println("You chose Heckler & Koch G3");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 5 :System.out.println("You chose Heckler & Koch G3");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+        default :System.out.println("Wrong choice");   
+    }
+   } 
+  static void chinarifles()
+   {
+       int x,c;
+       System.out.println("Welcome to China's assault rifle collection");
+       System.out.println("Each assault rifle cost's Rs. 20000");
+       System.out.println("1.CS/LR17\n2.CS/LR14\n3.Type 88\n4.QBZ-95\n5.QBZ-03\n6.Type 81\n7.QBS-06\n8.Type 63\n9.Type 56\n10.Norinco CQ\n11.QBZ-95B\n12.Type 56 carbine");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4/5/6/7/8/9/10/11/12");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose CS/LR17");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 2 :System.out.println("You chose CS/LR14");
+                  System.out.println("Enter number of rifles you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*20000);
+                  break;         
+           case 3 :System.out.println("You chose Type 88");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 4 :System.out.println("You chose QBZ-95");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 5 :System.out.println("You chose QBZ-03");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 6 :System.out.println("You chose Type 81");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 7 :System.out.println("You chose QBS-06");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 8 :System.out.println("You chose Type 63");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 9 :System.out.println("You chose Type 56");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+           case 10 :System.out.println("You chose Norinco CQ");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 11 :System.out.println("You chose QBZ-95B");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+          case 12 :System.out.println("You chose Type 56 carbine");
+                   System.out.println("Enter number of rifles you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*20000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    }
+   }      
+   static void usapistols()
+   {
+       int x,c;
+       System.out.println("Welcome to U.S.A's pistol collection");
+       System.out.println("Each pistol cost's Rs. 5000");
+       System.out.println("1.M1911\n2.M9\n3.M11");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose M1911");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+          case 2 :System.out.println("You chose M9");
+                  System.out.println("Enter number of pistols you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*5000);
+                  break;         
+         case 3 :System.out.println("You chose M1911");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    }
+}
+static void russiapistols()
+   {
+       int x,c;
+       System.out.println("Welcome to Russia's pistol collection");
+       System.out.println("Each pistol cost's Rs. 5000");
+       System.out.println("1.PM\n2.APS\n3.PB\n4.PSS silent pistol\n5.PMM\n6.Serdyukov SPS\n7.MP-443 Grach\n8.GSh-18\n9.OTs-33 Pernach\n10.OTs-21 Malysh\n11.Glock 17\n12.Beretta 92FS\n13.CZ 75\n14.RSA Kobalt");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4/5/6/7/8/9/10/11/12/13/14");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose PM");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+          case 2 :System.out.println("You chose APS");
+                  System.out.println("Enter number of pistols you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*5000);
+                  break;         
+         case 3 :System.out.println("You chose PB");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+                   
+           case 4 :System.out.println("You chose PSS silent pistol");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 5 :System.out.println("You chose PMM");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 6 :System.out.println("You chose Serdyukov SPS");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+          case 7 :System.out.println("You chose MP-443 Grach");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 8 :System.out.println("You chose GSh-18");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 9 :System.out.println("You chose OTs-33 Pernach");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 10 :System.out.println("You chose OTs-21 Malysh");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+          case 11 :System.out.println("You chose Glock 17");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 12 :System.out.println("You chose Beretta 92FS");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 13 :System.out.println("You chose CZ 75");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 14 :System.out.println("You chose RSA Kobalt");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;                            
+        default :System.out.println("Wrong choice");   
+    }
+} 
+static void francepistols()
+   {
+       int x,c;
+       System.out.println("Welcome to France's pistol collection");
+       System.out.println("Each pistol cost's Rs. 5000");
+       System.out.println("1.MAC 50\n2.PAMAS G1\n3.Glock 17\n4.HK USP.SD");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose MAC 50");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+          case 2 :System.out.println("You chose PAMAS G1");
+                  System.out.println("Enter number of pistols you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*5000);
+                  break;         
+         case 3 :System.out.println("You chose Glock 17");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+                   
+           case 4 :System.out.println("You chose HK USP.SD");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    
+    }
+}
+static void germanypistols()
+   {
+       int x,c;
+       System.out.println("Welcome to Germany's pistol collection");
+       System.out.println("Each pistol cost's Rs. 5000");
+       System.out.println("1.Heckler & Koch USP(Pistole 8/P8)\n2.Heckler & Koch USP(Pistole 12/P12)\n3.Heckler & Koch P7\n4.Heckler & Koch P30\n5.Heckler & Koch P2A1");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4/5");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose Heckler & Koch USP(Pistole 8/P8)");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+          case 2 :System.out.println("You chose Heckler & Koch USP(Pistole 12/P12)");
+                  System.out.println("Enter number of pistols you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*5000);
+                  break;         
+         case 3 :System.out.println("You chose Heckler & Koch P7");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+                  
+           case 4 :System.out.println("You chose Heckler & Koch P30");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 5 :System.out.println("You chose Heckler & Koch P2A1");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    } 
+   }
+static void chinapistols()
+   {
+       int x,c;
+       System.out.println("Welcome to China's pistol collection");
+       System.out.println("Each pistol cost's Rs. 5000");
+       System.out.println("1.P19\n2.P12\n3.QX-04\n4.QSW-06\n5.QSZ-92\n6.LP5\n7.CF-07\n8.QSZ-11\n9.Type 84\n10.Type 77");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3/4/5/6/7/8/9/10");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose Heckler & Koch USP(Pistole 8/P8)");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+          case 2 :System.out.println("You chose Heckler & Koch USP(Pistole 12/P12)");
+                  System.out.println("Enter number of pistols you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*5000);
+                  break;         
+         case 3 :System.out.println("You chose Heckler & Koch P7");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 4 :System.out.println("You chose Heckler & Koch P30");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+           case 5 :System.out.println("You chose Heckler & Koch P2A1");
+                   System.out.println("Enter number of pistols you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*5000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    } 
+   }
+   
+  static void usashotguns()
+  {
+      int x,c;
+       System.out.println("Welcome to U.S.A's shotgun collection");
+       System.out.println("Each shotgun cost's Rs. 10000");
+       System.out.println("1.M500\n2.M590\n3.M26 modular shotgun(accessory)");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2/3");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose M500");
+                   System.out.println("Enter number of shotguns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*10000);
+                   break;
+          case 2 :System.out.println("You chose M590");
+                  System.out.println("Enter number of shotguns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*10000);
+                  break;         
+         case 3 :System.out.println("You chose M26 modular shotgun(accessory)");
+                   System.out.println("Enter number of shotguns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*10000);
+                   break;
+        default :System.out.println("Wrong choice");   
+    } 
+    }
+   
+   static void russiashotguns()
+  {
+      int x,c;
+       System.out.println("Welcome to Russia's shotgun collection");
+       System.out.println("Each shotgun cost's Rs. 10000");
+       System.out.println("1.KS-23\n2.Saiga 12");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose KS-23");
+                   System.out.println("Enter number of shotguns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*10000);
+                   break;
+          case 2 :System.out.println("You chose KS-23");
+                  System.out.println("Enter number of shotguns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*10000);
+                  break;                           
+        default :System.out.println("Wrong choice");   
+    } 
+    }
+    
+    static void franceshotguns()
+  {
+      int x,c;
+       System.out.println("Welcome to France's shotgun collection");
+       System.out.println("Each shotgun cost's Rs. 10000");
+       System.out.println("1.Benelli M3T Super 90\n2.Mossberg 500");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose Benelli M3T Super 90");
+                   System.out.println("Enter number of shotguns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*10000);
+                   break;
+          case 2 :System.out.println("You chose Mossberg 500");
+                  System.out.println("Enter number of shotguns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*10000);
+                  break;         
+        default :System.out.println("Wrong choice");   
+    } 
+    }
+    
+    static void germanyshotguns()
+  {
+      int x,c;
+       System.out.println("Welcome to Germany's shotgun collection");
+       System.out.println("Each shotgun cost's Rs. 10000");
+       System.out.println("1.Heckler & Koch FABARM FP6\n2.Remington Model 870");
+       System.out.println("Type the number that indicates your choice of assault rifle 1/2");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose Heckler & Koch FABARM FP6");
+                   System.out.println("Enter number of shotguns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*10000);
+                   break;
+          case 2 :System.out.println("You chose Remington Model 870");
+                  System.out.println("Enter number of shotguns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*10000);
+                  break;         
+        default :System.out.println("Wrong choice");   
+    } 
+    }
+    
+    static void chinashotguns()
+  {
+      
+       System.out.println("Welcome to China's shotgun collection");
+       System.out.println("Sorry none available");
+    }
+   
+   
+static void   usalaunchers()
+{
+    int x,c;
+       System.out.println("Welcome to U.S.A's launcher collection");
+       System.out.println("Each launcher cost's Rs. 30000");
+       System.out.println("1.M320 grenade launcher\n2.MK19 grenade machine gun\n3.M3 Carl Gustaf (MAAWS)");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose M320 grenade launcher");
+                   System.out.println("Enter number of launchers you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*30000);
+                   break;
+          case 2 :System.out.println("You chose MK19 grenade machine gun");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 3 :System.out.println("You chose M3 Carl Gustaf (MAAWS)");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+static void   russialaunchers()
+{
+    int x,c;
+       System.out.println("Welcome to Russia's launcher collection");
+       System.out.println("Each launcher cost's Rs. 30000");
+       System.out.println("1.RPG-7\n2.AGS-17 Plamya\n3.SA-7 Grail\n4.RPG-18\n5.SA-14 Gremlin\n6.GP-25\n7.SA-18 Grouse\n8.RPG-22\n9.RPG-26\n10.RPO-A 'Shmel'\n11.GP-30\n12.AT-14 Spriggan\n13.AGS-30");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3/4/5/6/7/8/9/10/11/12/13");
+       x=sc.nextInt();
+       switch(x)
+       {
+          case 1 :System.out.println("You chose RPG-7");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 2 :System.out.println("You chose AGS-17 Plamya");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 3 :System.out.println("You chose SA-7 Grail");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 4 :System.out.println("You chose RPG-18");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 5 :System.out.println("You chose SA-14 Gremlin");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 6 :System.out.println("You chose GP-25");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 7 :System.out.println("You chose SA-18 Grouse");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 8 :System.out.println("You chose RPG-22");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 9 :System.out.println("You chose RPG-26");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 10 :System.out.println("You chose RPO-A 'Shmel'");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 11 :System.out.println("You chose GP-30");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 12 :System.out.println("You chose AT-14 Spriggan");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 13 :System.out.println("You chose AGS-30");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+static void   francelaunchers()
+{
+    int x,c;
+       System.out.println("Welcome to France's launcher collection");
+       System.out.println("Each launcher cost's Rs. 30000");
+       System.out.println("1.AT4 CS\n2.MILAN\n3.FGM-148 Javelin\n4.ERYX\n5.MMP/n6.LGI Mle F1 (Lance-grenade individuel Mle F1)\n7.Heckler & Koch AG36\n8.M203 grenade launcher");
+       System.out.println("Type the number that indicates your choice of shotgun 1/2/3/4/5/6/7/8");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose AT4 CS");
+                   System.out.println("Enter number of launchers you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*30000);
+                   break;
+          case 2 :System.out.println("You chose MILAN");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 3 :System.out.println("You chose FGM-148 Javelin");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 4 :System.out.println("You chose ERYX");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 5 :System.out.println("You chose MMP");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 6 :System.out.println("You chose LGI Mle F1 (Lance-grenade individuel Mle F1)");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 7 :System.out.println("You chose Heckler & Koch AG36");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 8 :System.out.println("You chose M203 grenade launcher");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+static void   germanylaunchers()
+{
+    int x,c;
+       System.out.println("Welcome to U.S.A's launcher collection");
+       System.out.println("Each launcher cost's Rs. 30000");
+       System.out.println("1.Heckler & Koch AG36\n2.Heckler & Koch HK69A1\n3.Heckler & Koch GMG\n4.Panzerfaust 3\n5.MATADOR\n6.Carl Gustav\n7.EUROSPIKE\n8.MILAN");
+       System.out.println("Type the number that indicates your choice of shotgun 1/2/3/4/5/6/7/8");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose Heckler & Koch AG36");
+                   System.out.println("Enter number of launchers you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*30000);
+                   break;
+          case 2 :System.out.println("You chose Heckler & Koch HK69A1");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 3 :System.out.println("You chose Heckler & Koch GMG");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 4 :System.out.println("You chose Panzerfaust 3");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 5 :System.out.println("You chose MATADOR");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 6 :System.out.println("You chose Carl Gustav");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 7 :System.out.println("You chose EUROSPIKE");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+          case 8 :System.out.println("You chose MILAN");
+                  System.out.println("Enter number of launchers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*30000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+static void   chinalaunchers()
+{
+   
+       System.out.println("Welcome to China's launcher collection");
+       System.out.println("Sorry none available");
+}
+
+static void   usasnipers()
+{
+    int x,c;
+       System.out.println("Welcome to U.S.A's sniper collection");
+       System.out.println("Each sniper cost's Rs. 25000");
+       System.out.println("1.M110 semi-automatic sniper system\n2.M2010 enhanced sniper rifle\n3.M107 long-range sniper rifle");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose M110 semi-automatic sniper system");
+                   System.out.println("Enter number of snipers you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*25000);
+                   break;
+          case 2 :System.out.println("You chose M2010 enhanced sniper rifle");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 3 :System.out.println("You chose M107 long-range sniper rifle");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+
+static void   russiasnipers()
+{
+    int x,c;
+       System.out.println("Welcome to Russia's sniper collection");
+       System.out.println("Each sniper cost's Rs. 25000");
+       System.out.println("1.SVD Dragunov\n2.VSS Vintorez\n3.KSVK 12.7\n4.SVU Dragunov\n5.SV-98\n6.TRG-22\n7.Accuracy International AW\n8.Heckler & Koch MR 762\n9.VSSK Vychlop");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3/4/5/6/7/8/9");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose SVD Dragunov");
+                   System.out.println("Enter number of snipers you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*25000);
+                   break;
+          case 2 :System.out.println("You chose VSS Vintorez");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 3 :System.out.println("You chose KSVK 12.7");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 4 :System.out.println("You chose SVU Dragunov");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 5 :System.out.println("You chose SV-98");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 6 :System.out.println("You chose TRG-22");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 7 :System.out.println("You chose Accuracy International AW");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 8 :System.out.println("You chose Heckler & Koch MR 762");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 9 :System.out.println("You chose VSSK Vychlop");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+static void   francesnipers()
+{
+    int x,c;
+       System.out.println("Welcome to France's sniper collection");
+       System.out.println("Each sniper cost's Rs. 25000");
+       System.out.println("1.FR-F2\n2.PGM Ultima Ratio\n3.HK MSG90\n4.HK 417\n5.PGM Hécate II");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3/4/5");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose FR-F2");
+                   System.out.println("Enter number of snipers you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*25000);
+                   break;
+          case 2 :System.out.println("You chose PGM Ultima Ratio");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 3 :System.out.println("You chose HK MSG90");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 4 :System.out.println("You chose HK 417");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 5 :System.out.println("You chose PGM Hécate II");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+static void   germanysnipers()
+{
+    int x,c;
+       System.out.println("Welcome to Germany's sniper collection");
+       System.out.println("Each sniper cost's Rs. 25000");
+       System.out.println("1.Accuracy International AWM\n2.Heckler & Koch G28\n3.M107(M107A1)");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose Accuracy International AWM");
+                   System.out.println("Enter number of snipers you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*25000);
+                   break;
+          case 2 :System.out.println("You chose Heckler & Koch G28");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+          case 3 :System.out.println("You chose M107(M107A1)");
+                  System.out.println("Enter number of snipers you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*25000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+static void   chinasnipers()
+{
+    int x,c;
+       System.out.println("Welcome to China's sniper collection");
+       System.out.println("Sorry none available");
+}
+
+static void   usamachineguns()
+{
+    int x,c;
+       System.out.println("Welcome to U.S.A's machine gun/sub-machine gun collection");
+       System.out.println("Each machine gun/sub-machine gun cost's Rs. 15000");
+       System.out.println("1.M249 squad automatic weapon\n2.M240B medium machine gun\n3.M240L medium machine gun\n4.M240H medium machine gun\n5.M2 machine gun");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3/4/5");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose M249 squad automatic weapon");
+                   System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*15000);
+                   break;
+          case 2 :System.out.println("You chose M240B medium machine gun");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 3 :System.out.println("You chose M240L medium machine gun");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 4 :System.out.println("You chose M240H medium machine gun");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 5 :System.out.println("You chose M2 machine gun");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+
+static void   russiamachineguns()
+{
+    int x,c;
+       System.out.println("Welcome to Russia's machine gun/sub-machine gun collection");
+       System.out.println("Each machine gun/sub-machine gun cost's Rs. 15000");
+       System.out.println("1.OTs-02 Kiparis\n2.Kedr PP-91\n3.PP-19 Bizon\n4.SR-2 Veresk\n5.AEK-919K “Kashtan”\n6.PP-2000\n7.PP-19-01 \"Vityaz-SN\"\n8.Heckler & Koch MP5A3\n9.Brügger & Thomet MP9\n10.DShK");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3/4/5/6/7/8/9/10");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose OTs-02 Kiparis");
+                   System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*15000);
+                   break;
+          case 2 :System.out.println("You chose Kedr PP-91");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 3 :System.out.println("You chose PP-19 Bizon");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 4 :System.out.println("You chose SR-2 Veresk");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 5 :System.out.println("You chose AEK-919K “Kashtan”");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 6 :System.out.println("You chose PP-2000");
+                   System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*15000);
+                   break;
+          case 7 :System.out.println("You chose PP-19-01 \"Vityaz-SN\"");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 8 :System.out.println("You chose Heckler & Koch MP5A3");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 9 :System.out.println("You chose Brügger & Thomet MP9");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+         case 10 :System.out.println("You chose DShK");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+
+static void  francemachineguns()
+{
+    int x,c;
+       System.out.println("Welcome to France's machine gun/sub-machine gun collection");
+       System.out.println("Each machine gun/sub-machine gun cost's Rs. 15000");
+       System.out.println("1.HK MP5 A5(HK MP5 SD3)\n2.FN P90\n3.FN Minimi\n4.ANF1\n5.FN MAG\n6.M2 Browning");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3/4/5/6");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose HK MP5 A5(HK MP5 SD3)");
+                   System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*15000);
+                   break;
+          case 2 :System.out.println("You chose FN P90");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 3 :System.out.println("You chose FN Minimi");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 4 :System.out.println("You chose ANF1");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 5 :System.out.println("You chose FN MAG");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 6 :System.out.println("You chose M2 Browning");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+
+static void  germanymachineguns()
+{
+    int x,c;
+       System.out.println("Welcome to Germany's machine gun/sub-machine gun collection");
+       System.out.println("Each machine gun/sub-machine gun cost's Rs. 15000");
+       System.out.println("1.Heckler & Koch MP7\n2.Heckler & Koch MP5\n3.Heckler & Koch MG4\n4.Rheinmetall MG3\n5.Heckler & Koch MG5\n6.M2 Browning");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3/4/5/6");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose Heckler & Koch MP7");
+                   System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*15000);
+                   break;
+          case 2 :System.out.println("You chose Heckler & Koch MP5");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 3 :System.out.println("You chose Heckler & Koch MG4");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 4 :System.out.println("You chose Rheinmetall MG3");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 5 :System.out.println("You chose Heckler & Koch MG5");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 6 :System.out.println("You chose M2 Browning");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+}
+
+static void chinamachineguns()
+{
+    int x,c;
+       System.out.println("Welcome to China's machine gun/sub-machine gun collection");
+       System.out.println("Each machine gun/sub-machine gun cost's Rs. 15000");
+       System.out.println("1.JH-16-1\n2.LS7\n3.CS/LS6\n4.CS/LS5\n5.CS/LS3\n6.CF-11\n7.CS/LS2\n8.QCW-05\n9.Type 85\n10.Type 82");
+       System.out.println("Type the number that indicates your choice of launcher 1/2/3/4/5/6/7/8/9/10");
+       x=sc.nextInt();
+       switch(x)
+       {
+           case 1 :System.out.println("You chose JH-16-1");
+                   System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*15000);
+                   break;
+          case 2 :System.out.println("You chose LS7");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 3 :System.out.println("You chose CS/LS6");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 4 :System.out.println("You chose CS/LS5");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 5 :System.out.println("You chose CS/LS3");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 6 :System.out.println("You chose CF-11");
+                   System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                    c=sc.nextInt();
+                   bill=bill+(c*15000);
+                   break;
+          case 7 :System.out.println("You chose CS/LS2");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 8 :System.out.println("You chose QCW-05");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+          case 9 :System.out.println("You chose Type 85");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+         case 10 :System.out.println("You chose Type 82");
+                  System.out.println("Enter number of machine guns/sub-machine guns you would like to buy");
+                   c=sc.nextInt();
+                  bill=bill+(c*15000);
+                  break;
+        default :System.out.println("Wrong choice");   
+    } 
+  }
+}
